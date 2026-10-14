@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کنترل کیفیت و بسته‌بندی | خاور صدرا</title>
+<meta name="description" content="کنترل کیفیت مرحله‌ای، آزمایشگاه و بسته‌بندی سفارشی مواد شیمیایی در خاور صدرا.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l8 5v10l-8 5-8-5V7z' fill='%230B2447'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors:{ ink:{DEFAULT:'#0B2447',700:'#123A6B',900:'#071A33'}, aqua:{DEFAULT:'#0E7C86',400:'#14A3B0'}, sun:'#E8871E', mist:'#F5F7FA', wa:'#25D366' }, fontFamily:{ fa:['Vazirmatn','sans-serif'], en:['Manrope','sans-serif'] }, boxShadow:{ soft:'0 14px 44px -16px rgba(11,36,71,.18)', card:'0 4px 22px -10px rgba(11,36,71,.14)' } } } }</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<link rel="stylesheet" href="../assets/css/custom.css">
+<script type="module" src="../assets/js/main.js"></script>
+</head>
+<body data-page="service-quality" class="bg-white text-ink font-fa antialiased">
+
+<section class="pg-hero"><div class="container-x">
+  <nav class="crumb" aria-label="breadcrumb" data-crumb="service:quality"></nav>
+  <h1 class="pg-hero-h" data-i18n="sv.quality.hero.title"></h1>
+  <p class="pg-hero-p max-w-2xl" data-i18n="sv.quality.hero.sub"></p>
+</div></section>
+
+<!-- اسپلیت داشبوردی: اعداد بزرگ + چک‌لیست -->
+<section class="section"><div class="container-x grid lg:grid-cols-5 gap-6 items-stretch">
+  <div class="lg:col-span-2 bg-ink text-white rounded-xl p-8 flex flex-col justify-between" data-reveal>
+    <h2 class="text-lg font-extrabold !text-white" data-i18n="sv.quality.dash.title"></h2>
+    <div class="space-y-6 my-8" id="quality-metrics"></div>
+    <p class="text-xs text-white/50" data-i18n="sv.quality.dash.note"></p>
+  </div>
+  <div class="lg:col-span-3 card p-8" data-reveal>
+    <h2 class="text-lg font-extrabold" data-i18n="sv.quality.checklist.title"></h2>
+    <p class="text-sm text-ink/60 mt-1" data-i18n="sv.quality.checklist.sub"></p>
+    <ol class="qc-list mt-6" id="quality-checklist"></ol>
+  </div>
+</div></section>
+
+<!-- مقایسه گریدها با تب -->
+<section class="bg-mist"><div class="container-x py-16 lg:py-24">
+  <header class="sec-head"><p class="kicker" data-i18n="sv.quality.grades.kicker"></p><h2 class="h2" data-i18n="sv.quality.grades.title"></h2></header>
+  <div class="tabs mt-8" id="quality-tabs" role="tablist"></div>
+  <div class="card mt-4 overflow-x-auto" id="quality-table"></div>
+</div></section>
+
+<!-- گالری بسته‌بندی + FAQ -->
+<section class="section"><div class="container-x">
+  <header class="sec-head"><p class="kicker" data-i18n="sv.quality.pack.kicker"></p><h2 class="h2" data-i18n="sv.quality.pack.title"></h2></header>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8" id="quality-pack"></div>
+  <div class="mt-14 max-w-3xl">
+    <header class="sec-head !text-start"><p class="kicker" data-i18n="sv.quality.faq.kicker"></p><h2 class="h2" data-i18n="sv.quality.faq.title"></h2></header>
+    <div class="mt-8 space-y-3" id="quality-faq"></div>
+  </div>
+  <div class="cta-band mt-12" data-reveal>
+    <div><h2 class="text-xl font-extrabold" data-i18n="sv.quality.cta.title"></h2><p class="mt-2 text-ink/70" data-i18n="sv.quality.cta.sub"></p></div>
+    <a href="#" class="btn btn-sun" id="quality-cta" data-cta="quality-bottom"><span data-i18n="sv.quality.cta.btn"></span></a>
+  </div>
+</div></section>
+
+</body>
+</html>

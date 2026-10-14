@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تماس با ما | پتروپالایش خاور صدرا</title>
+<meta name="description" content="راه‌های ارتباطی با خاور صدرا: تلفن، واتساپ، تلگرام، ایمیل و دفتر مرکزی. پاسخگویی شنبه تا پنجشنبه.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l8 5v10l-8 5-8-5V7z' fill='%230B2447'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors:{ ink:{DEFAULT:'#0B2447',700:'#123A6B',900:'#071A33'}, aqua:{DEFAULT:'#0E7C86',400:'#14A3B0'}, sun:'#E8871E', mist:'#F5F7FA', wa:'#25D366' }, fontFamily:{ fa:['Vazirmatn','sans-serif'], en:['Manrope','sans-serif'] }, boxShadow:{ soft:'0 14px 44px -16px rgba(11,36,71,.18)', card:'0 4px 22px -10px rgba(11,36,71,.14)' } } } }</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="contact" class="bg-white text-ink font-fa antialiased">
+
+<section class="pg-hero"><div class="container-x">
+  <nav class="crumb" aria-label="breadcrumb" data-crumb="contact"></nav>
+  <h1 class="pg-hero-h" data-i18n="contact.hero.title"></h1>
+  <p class="pg-hero-p max-w-2xl" data-i18n="contact.hero.sub"></p>
+</div></section>
+
+<!-- کارت‌های راه ارتباطی -->
+<section class="section !pt-10"><div class="container-x">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="contact-channels"></div>
+</div></section>
+
+<!-- فرم + نقشه -->
+<section class="bg-mist"><div class="container-x py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-start">
+  <form class="card p-6 lg:p-8" id="contact-form" novalidate>
+    <h2 class="text-lg font-extrabold" data-i18n="contact.form.title"></h2>
+    <p class="text-sm text-ink/60 mt-1" data-i18n="contact.form.sub"></p>
+    <div class="grid sm:grid-cols-2 gap-4 mt-6">
+      <label class="fld"><span data-i18n="contact.form.f1"></span><input name="name" required class="inp"></label>
+      <label class="fld"><span data-i18n="contact.form.f2"></span><input name="phone" dir="ltr" required class="inp"></label>
+      <label class="fld"><span data-i18n="contact.form.f3"></span><input name="email" dir="ltr" type="email" class="inp"></label>
+      <label class="fld"><span data-i18n="contact.form.f4"></span><select name="topic" class="inp" id="cf-topics"></select></label>
+    </div>
+    <label class="fld mt-4"><span data-i18n="contact.form.f5"></span><textarea name="msg" rows="4" required class="inp"></textarea></label>
+    <p class="form-err hidden text-red-600 text-sm mt-3" id="cf-err"></p>
+    <div class="flex flex-wrap gap-3 mt-5">
+      <button class="btn btn-sun" type="submit" data-cta="contact-submit"><span data-i18n="contact.form.submit"></span></button>
+      <button class="btn btn-ghost-wa" type="button" id="cf-wa" data-cta="contact-wa"><span data-i18n="contact.form.wa"></span></button>
+    </div>
+    <p class="form-ok hidden mt-4 text-sm text-emerald-700 font-bold" id="cf-ok"></p>
+  </form>
+  <div data-reveal>
+    <div class="card overflow-hidden">
+      <div class="map-fallback p-0" id="contact-map"></div>
+    </div>
+    <div class="card mt-5 p-6 flex items-start gap-4">
+      <span data-icon="clock" class="shrink-0 text-aqua"></span>
+      <div><h3 class="font-extrabold" data-i18n="contact.hours.title"></h3><p class="text-sm text-ink/70 mt-1 leading-7" id="contact-hours"></p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section"><div class="container-x max-w-3xl">
+  <header class="sec-head"><p class="kicker" data-i18n="contact.faq.kicker"></p><h2 class="h2" data-i18n="contact.faq.title"></h2></header>
+  <div class="mt-8 space-y-3" id="contact-faq"></div>
+</div></section>
+
+</body>
+</html>

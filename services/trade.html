@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بازرگانی، واردات و ترخیص | خاور صدرا</title>
+<meta name="description" content="واردات و ترخیص مواد شیمیایی از مبادی معتبر جهانی با پوشش کامل امور گمرکی و بانکی.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l8 5v10l-8 5-8-5V7z' fill='%230B2447'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors:{ ink:{DEFAULT:'#0B2447',700:'#123A6B',900:'#071A33'}, aqua:{DEFAULT:'#0E7C86',400:'#14A3B0'}, sun:'#E8871E', mist:'#F5F7FA', wa:'#25D366' }, fontFamily:{ fa:['Vazirmatn','sans-serif'], en:['Manrope','sans-serif'] }, boxShadow:{ soft:'0 14px 44px -16px rgba(11,36,71,.18)', card:'0 4px 22px -10px rgba(11,36,71,.14)' } } } }</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<link rel="stylesheet" href="../assets/css/custom.css">
+<script type="module" src="../assets/js/main.js"></script>
+</head>
+<body data-page="service-trade" class="bg-white text-ink font-fa antialiased">
+
+<section class="pg-hero"><div class="container-x">
+  <nav class="crumb" aria-label="breadcrumb" data-crumb="service:trade"></nav>
+  <h1 class="pg-hero-h" data-i18n="sv.trade.hero.title"></h1>
+  <p class="pg-hero-p max-w-2xl" data-i18n="sv.trade.hero.sub"></p>
+</div></section>
+
+<!-- نقشه مسیرهای تأمین -->
+<section class="section"><div class="container-x">
+  <header class="sec-head"><p class="kicker" data-i18n="sv.trade.routes.kicker"></p><h2 class="h2" data-i18n="sv.trade.routes.title"></h2></header>
+  <div class="card mt-8 p-6 lg:p-10" data-reveal>
+    <svg viewBox="0 0 700 260" class="w-full routes-svg" role="img" aria-label="Supply routes">
+      <path class="draw" d="M120 200 C200 90 420 90 350 170 C280 250 520 250 600 130" fill="none" stroke="#0E7C86" stroke-width="1.5"/>
+      <g font-size="11" fill="#0B2447" font-weight="700">
+        <text x="60" y="215" data-i18n="sv.trade.routes.r1"></text>
+        <text x="620" y="120" data-i18n="sv.trade.routes.r2"></text>
+        <text x="300" y="60" data-i18n="sv.trade.routes.r3"></text>
+      </g>
+      <circle class="draw" cx="120" cy="200" r="6"/><circle class="draw" cx="600" cy="130" r="6"/><circle class="draw" cx="350" cy="170" r="6" fill="#E8871E"/>
+    </svg>
+  </div>
+</div></section>
+
+<!-- تایم‌لاین افقی pin شده -->
+<section id="trade-pin" class="bg-ink text-white/90 overflow-hidden">
+  <div class="trade-track-wrap">
+    <div class="container-x pt-14 pb-4"><p class="kicker kicker-light" data-i18n="sv.trade.tl.kicker"></p><h2 class="h2 !text-white" data-i18n="sv.trade.tl.title"></h2></div>
+    <div id="trade-track" class="flex gap-6 px-6 pb-16 will-change-transform"></div>
+  </div>
+</section>
+
+<section class="section"><div class="container-x">
+  <div class="grid sm:grid-cols-3 gap-5" id="trade-points"></div>
+  <div class="cta-band mt-12" data-reveal>
+    <div><h2 class="text-xl font-extrabold" data-i18n="sv.trade.cta.title"></h2><p class="mt-2 text-ink/70" data-i18n="sv.trade.cta.sub"></p></div>
+    <a href="#" class="btn btn-sun" id="trade-cta" data-cta="trade-bottom"><span data-i18n="sv.trade.cta.btn"></span></a>
+  </div>
+</div></section>
+
+</body>
+</html>

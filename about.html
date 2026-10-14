@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>درباره ما | پتروپالایش خاور صدرا</title>
+<meta name="description" content="داستان، ماموریت و ارزش‌های پتروپالایش خاور صدرا — بازرگانی تأمین مواد شیمیایی صنعتی با پوشش سراسری.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l8 5v10l-8 5-8-5V7z' fill='%230B2447'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors:{ ink:{DEFAULT:'#0B2447',700:'#123A6B',900:'#071A33'}, aqua:{DEFAULT:'#0E7C86',400:'#14A3B0'}, sun:'#E8871E', mist:'#F5F7FA', wa:'#25D366' }, fontFamily:{ fa:['Vazirmatn','sans-serif'], en:['Manrope','sans-serif'] }, boxShadow:{ soft:'0 14px 44px -16px rgba(11,36,71,.18)', card:'0 4px 22px -10px rgba(11,36,71,.14)' } } } }</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="about" class="bg-white text-ink font-fa antialiased">
+
+<!-- هیرو -->
+<section class="pg-hero"><div class="container-x">
+  <nav class="crumb" aria-label="breadcrumb" data-crumb="about"></nav>
+  <h1 class="pg-hero-h" data-i18n="about.hero.title"></h1>
+  <p class="pg-hero-p max-w-2xl" data-i18n="about.hero.sub"></p>
+</div></section>
+
+<!-- داستان -->
+<section class="section"><div class="container-x grid lg:grid-cols-2 gap-10 items-center">
+  <div class="ratio-43 rounded-xl overflow-hidden shadow-soft" data-reveal>
+    <img data-img="about-story" width="800" height="600" loading="lazy" alt="" class="img-tone">
+  </div>
+  <div data-reveal>
+    <p class="kicker" data-i18n="about.story.kicker"></p>
+    <h2 class="h2" data-i18n="about.story.title"></h2>
+    <p class="body-p mt-5" data-i18n="about.story.p1"></p>
+    <p class="body-p" data-i18n="about.story.p2"></p>
+  </div>
+</div></section>
+
+<!-- ماموریت / چشم‌انداز + اعداد -->
+<section class="bg-mist"><div class="container-x py-16 lg:py-24">
+  <div class="grid md:grid-cols-2 gap-5" id="about-mv"></div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-10" id="about-stats"></div>
+</div></section>
+
+<!-- ارزش‌ها -->
+<section class="section"><div class="container-x">
+  <header class="sec-head"><p class="kicker" data-i18n="about.values.kicker"></p><h2 class="h2" data-i18n="about.values.title"></h2></header>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8" id="about-values"></div>
+</div></section>
+
+<!-- تایم‌لاین تاریخچه -->
+<section class="bg-ink text-white/90"><div class="container-x py-16 lg:py-24">
+  <header class="sec-head"><p class="kicker kicker-light" data-i18n="about.tl.kicker"></p><h2 class="h2 !text-white" data-i18n="about.tl.title"></h2></header>
+  <div class="tl tl-light mt-10" id="about-tl"></div>
+</div></section>
+
+<!-- گواهینامه‌ها -->
+<section class="section"><div class="container-x">
+  <header class="sec-head"><p class="kicker" data-i18n="about.certs.kicker"></p><h2 class="h2" data-i18n="about.certs.title"></h2><p class="sub" data-i18n="about.certs.sub"></p></header>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8" id="about-certs"></div>
+</div></section>
+
+<!-- تیم -->
+<section class="bg-mist"><div class="container-x py-16 lg:py-24">
+  <header class="sec-head"><p class="kicker" data-i18n="about.team.kicker"></p><h2 class="h2" data-i18n="about.team.title"></h2></header>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8" id="about-team"></div>
+</div></section>
+
+<!-- CTA -->
+<section class="section"><div class="container-x">
+  <div class="cta-band" data-reveal>
+    <div><h2 class="text-xl font-extrabold" data-i18n="common.ctaBand.title"></h2><p class="mt-2 text-ink/70" data-i18n="common.ctaBand.sub"></p></div>
+    <a href="#" class="btn btn-sun" id="cta-band-wa" data-cta="about-cta"><span data-i18n="common.ctaBand.btn"></span></a>
+  </div>
+</div></section>
+
+</body>
+</html>

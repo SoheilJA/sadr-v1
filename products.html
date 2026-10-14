@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کاتالوگ محصولات | پتروپالایش خاور صدرا</title>
+<meta name="description" content="کاتالوگ مواد شیمیایی صنعتی خاور صدرا: نمک‌ها و سیلیکات‌ها، اسیدها، پلیمرها، صمغ‌ها و سورفکتانت‌ها با مشخصات فنی و CAS.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l8 5v10l-8 5-8-5V7z' fill='%230B2447'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors:{ ink:{DEFAULT:'#0B2447',700:'#123A6B',900:'#071A33'}, aqua:{DEFAULT:'#0E7C86',400:'#14A3B0'}, sun:'#E8871E', mist:'#F5F7FA', wa:'#25D366' }, fontFamily:{ fa:['Vazirmatn','sans-serif'], en:['Manrope','sans-serif'] }, boxShadow:{ soft:'0 14px 44px -16px rgba(11,36,71,.18)', card:'0 4px 22px -10px rgba(11,36,71,.14)' } } } }</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="products" class="bg-white text-ink font-fa antialiased">
+
+<section class="pg-hero"><div class="container-x">
+  <nav class="crumb" aria-label="breadcrumb" data-crumb="products"></nav>
+  <h1 class="pg-hero-h" data-i18n="products.hero.title"></h1>
+  <p class="pg-hero-p max-w-2xl" data-i18n="products.hero.sub"></p>
+</div></section>
+
+<!-- نوار ابزار: جستجو / فیلتر / مرتب‌سازی -->
+<section class="sticky top-[68px] z-30 bg-white/95 backdrop-blur border-b border-ink/8"><div class="container-x py-3.5 flex flex-col lg:flex-row gap-3 lg:items-center">
+  <div class="relative flex-1">
+    <span data-icon="search" class="absolute top-1/2 -translate-y-1/2 start-3.5 w-4.5 h-4.5 text-ink/35 pointer-events-none"></span>
+    <input id="p-search" class="inp !ps-10" data-i18n-attr="placeholder:products.searchPh">
+  </div>
+  <div class="flex gap-2 overflow-x-auto no-bar" id="p-cats" role="tablist"></div>
+  <select id="p-sort" class="inp lg:w-48">
+    <option value="default" data-i18n="products.sort.default"></option>
+    <option value="name" data-i18n="products.sort.name"></option>
+    <option value="cat" data-i18n="products.sort.cat"></option>
+  </select>
+</div></section>
+
+<section class="section !pt-8"><div class="container-x">
+  <p class="text-sm text-ink/55 mb-5" id="p-count"></p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="products-grid"></div>
+  <div class="empty-state hidden" id="p-empty"><p data-i18n="products.empty"></p></div>
+  <p class="text-xs text-ink/40 mt-8 leading-6" data-i18n="products.disclaimer"></p>
+</div></section>
+
+</body>
+</html>
